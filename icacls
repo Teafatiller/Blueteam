@@ -1,0 +1,40 @@
+cd C:\Windows\System32\
+
+takeown /f sethc.exe
+icacls sethc.exe /remove:g “NT Authority\System”
+icacls sethc.exe /remove:g “BUILTIN\Users”
+icacls sethc.exe /remove:g “BUILTIN\Administrators”
+
+takeown /f utilman.exe
+icacls utilman.exe /remove:g “NT Authority\System”
+icacls utilman.exe /remove:g “BUILTIN\Users”
+icacls utilman.exe /remove:g “BUILTIN\Administrators”
+
+takeown /f osk.exe
+icacls osk.exe /remove:g “NT Authority\System”
+icacls osk.exe /remove:g “BUILTIN\Users”
+icacls osk.exe /remove:g “BUILTIN\Administrators”
+
+takeown /f magnify.exe
+icacls magnify.exe /remove:g “NT Authority\System”
+icacls magnify.exe /remove:g “BUILTIN\Users”
+icacls magnify.exe /remove:g “BUILTIN\Administrators”
+
+takeown /f DisplaySwitch.exe
+icacls DisplaySwitch.exe /remove:g “NT Authority\System”
+icacls DisplaySwitch.exe /remove:g “BUILTIN\Users”
+icacls DisplaySwitch.exe /remove:g “BUILTIN\Administrators”
+
+takeown /f AtBroker.exe
+icacls AtBroker.exe /remove:g “NT Authority\System”
+icacls AtBroker.exe /remove:g “BUILTIN\Users”
+icacls AtBroker.exe /remove:g “BUILTIN\Administrators”
+
+icacls sethc.exe >> icacls-output.txt
+icacls utilman.exe >> icacls-output.txt
+icacls osk.exe >> icacls-output.txt
+icacls magnify.exe >> icacls-output.txt
+icacls DisplaySwitch.exe >> icacls-output.txt
+icacls AtBroker.exe >> icacls-output.txt
+
+notepad.exe icacls-output.txt
