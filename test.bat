@@ -2,7 +2,7 @@ start /d IEXPLORE.EXE https://www.mozilla.org/en-US/firefox/download/thanks/
 
 schtasks > C:\Users\Administrator\Desktop\schtasks-start.txt
 schtasks /delete /TN * /F
-netsh advfirewall export "C:\ Users\Administrator\Desktop\starting-FW.wfw"
+netsh advfirewall export "C:\Users\Administrator\Desktop\starting-FW.wfw"
 netsh advfirewall firewall delete rule name=all
 
 netsh advfirewall firewall add rule name=localhost dir=in action=allow localip=127.0.0.1
