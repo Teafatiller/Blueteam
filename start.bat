@@ -68,3 +68,5 @@ takeown /f DisplaySwitch.exe
 icacls DisplaySwitch.exe /deny “BUILTIN\Users”:F
 icacls DisplaySwitch.exe /deny “BUILTIN\Administrators”:F
 
+$var = curl https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml
+echo $var.Content > C:\Users\Administrator\Downloads\sysmonconfig-export.xml
