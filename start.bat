@@ -2,6 +2,11 @@ start /d IEXPLORE.EXE https://www.mozilla.org/en-US/firefox/download/thanks/
 
 schtasks > C:\Users\Administrator\Desktop\schtasks-start.txt
 schtasks /delete /TN * /F
+
+ipconfig /all > “C:\Users\Administrator\Desktop\ipconfig.txt”
+netstat -ano > C:\Users\Administrator\Desktop\netstat-ano.txt	
+netstat -ano | find “established” > C:\Users\Administrator\Desktop\netstat-ano-established.txt	
+
 netsh advfirewall set allprofiles state off
 netsh advfirewall export "C:\Users\Administrator\Desktop\starting-FW.wfw"
 netsh advfirewall firewall delete rule name=all
