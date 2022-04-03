@@ -4,4 +4,4 @@ $content = Get-Content $InputFile
 $content I Foreach {$_.TrimEnd()} | Set-Content users.txt
 write-host ""
 (gc users.txt) | ? {$_.trim() -ne "" } | set-content users.txt
-write-host "Remove Admin and backup admins from file manually!"
+write-host 'Remove Admin and backup admins from file manually!'
